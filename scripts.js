@@ -35,16 +35,33 @@ request.onload = function(){
 			h1.textContent = movie.title;
 
 			//p with description for each film
-			const p = document.createElement('p');
+			const pDesc = document.createElement('p');
 			movie.description = movie.description.substring(0, 300); //set the limit shown to be 300
-			p.textContent = `${movie.description}...`; //end with an elipses
+			pDesc.textContent = `${movie.description}...`; //end with an elipses
 
-			//append to the container
+			//p with director of each film
+			//make a div, append a p to it
+			const pDir = document.createElement('p');
+			pDir.innerHTML = `Director: ${movie.director}`;
+
+
+			//p with producer of each film
+			const pPro = document.createElement('p');
+			pPro.textContent = `Producer: ${movie.producer}`;
+
+			//p with release year of each film
+			const pRel = document.createElement('p');
+			pRel.textContent = `Release Year: ${movie.release_date}`;
+
+			//append the card to the container
 			container.appendChild(card);
 
 			//append both the title and description to the card
 			card.appendChild(h1);
-			card.appendChild(p);
+			card.appendChild(pDesc);
+			card.appendChild(pDir);
+			card.appendChild(pPro);
+			card.appendChild(pRel);
 		});
 	}
 	else{

@@ -32,7 +32,13 @@ img {
 }
 
 p {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.0rem 2.0rem;
+  margin: 0;
+  padding-bottom: 0.75rem;
+}
+
+a {
+  padding: 0 2.0rem 2.0rem;
   margin: 0;
 }
 
